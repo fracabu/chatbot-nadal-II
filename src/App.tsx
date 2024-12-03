@@ -22,9 +22,9 @@ function App() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   const tracks = [
-    '/audio/audio_t_HUlkHYz4A.mp3', // Aggiungi i tuoi file nella cartella public/audio
-    '/audio/audio_aAkMkVFwAoo.mp3',
-    '/audio/audio_3CWJNqyub3o.mp3',
+    'https://audiofilescontainer.blob.core.windows.net/audiocontainer/audio_aAkMkVFwAoo.mp3', 
+    'https://audiofilescontainer.blob.core.windows.net/audiocontainer/audio_t_HUlkHYz4A.mp3',
+    'https://audiofilescontainer.blob.core.windows.net/audiocontainer/audio_3CWJNqyub3o.mp3',
   ];
 
   const playTrack = () => {
