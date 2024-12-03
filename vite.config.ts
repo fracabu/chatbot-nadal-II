@@ -3,9 +3,18 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: './', // Usa percorsi relativi per il deploy
+  base: '/',
   build: {
-    outDir: 'dist', // Directory di output
+    outDir: 'dist',
   },
-  publicDir: 'public', // Directory per i file statici
+  server: {
+    headers: {
+      'Content-Type': 'application/javascript',
+    },
+  },
+  optimizeDeps: {
+    esbuildOptions: {
+      target: 'es2020'
+    },
+  }
 });
