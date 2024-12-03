@@ -3,19 +3,9 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/', // Cambiato da './' a '/' per Vercel
+  base: './', // Usa percorsi relativi per il deploy
   build: {
-    outDir: 'dist',
-    rollupOptions: {
-      output: {
-        format: 'es'
-      }
-    }
+    outDir: 'dist', // Directory di output
   },
-  publicDir: 'public',
-  server: {
-    headers: {
-      'Content-Type': 'application/javascript'
-    }
-  }
+  publicDir: 'public', // Directory per i file statici
 });
